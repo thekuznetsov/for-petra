@@ -42,3 +42,25 @@ function showRandomCompliment() {
 }
 
 showRandomCompliment();
+
+const thinkingMessages = [
+  "You crossed my mind 💭",
+  "Hope you're having a great day 🌸",
+  "Just wanted to say hi 👋",
+  "Thinking about you ✨",
+  "Sending you a smile 😊",
+  "You're doing great 💪",
+];
+
+const thinkingBtn = document.querySelector("#thinking-btn");
+const toastEl = document.querySelector("#toast");
+
+thinkingBtn.addEventListener("click", function () {
+  const randomIndex = Math.floor(Math.random() * thinkingMessages.length);
+  toastEl.textContent = thinkingMessages[randomIndex];
+  toastEl.classList.add("show");
+
+  setTimeout(function () {
+    toastEl.classList.remove("show");
+  }, 3000);
+});

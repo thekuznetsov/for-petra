@@ -99,3 +99,26 @@ h1 {
   line-height: 1.6;
   font-style: italic;
 }
+
+.toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: #e91e63;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

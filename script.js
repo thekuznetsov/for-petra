@@ -22,3 +22,23 @@ function updateTimer() {
 
 setInterval(updateTimer, 1000);
 updateTimer();
+
+const compliments = [
+  "You're amazing ✨",
+  "You make my day better 🌸",
+  "Thinking of you 💭",
+  "You're beautiful 💕",
+  "My favorite person 🌟",
+  "You light up my world ☀️",
+  "Lucky to have you 🍀",
+  "You're wonderful 💖",
+];
+
+const complimentEl = document.querySelector("#compliment");
+
+function showRandomCompliment() {
+  const randomIndex = Math.floor(Math.random() * compliments.length);
+  complimentEl.textContent = compliments[randomIndex];
+}
+
+showRandomCompliment();

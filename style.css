@@ -75,6 +75,18 @@ h1 {
   margin-top: 4px;
 }
 
+.photo {
+  margin-bottom: 24px;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
 #thinking-btn {
   background: #e91e63;
   color: white;
@@ -121,4 +133,36 @@ h1 {
 .toast.show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .timer {
+    gap: 8px;
+  }
+
+  .time-block {
+    padding: 12px 10px;
+    min-width: 60px;
+  }
+
+  .time-value {
+    font-size: 22px;
+  }
+
+  .time-label {
+    font-size: 10px;
+  }
+
+  #thinking-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 }
